@@ -49,3 +49,90 @@ npm run dev
 | DELETE | `/:eventId` (protected)    | Cancel event registration                  |
 | GET    | `/upcoming`                | List upcoming events                       |
 | GET    | `/:eventId`                | Get event stats                            |
+
+## Requests & Responses
+
+### 1. Create an Event:
+Request:
+{
+  "title": "AI Conference 2025",
+  "date": "2025-08-20T10:00:00.000Z",
+  "location": "Mumbai",
+  "capacity": 200
+}
+
+Response:
+{
+  "message": "Event created and creator registered successfully",
+  "eventId": "64bfc80ab1f245321e889999"
+}
+
+### 2. Register for an Event:
+Request: POST /api/events/64bfc80ab1f245321e889999
+
+Response:
+{
+  "message": "Successfully registered for the event"
+}
+
+### 3. Cancel Registration:
+Request: DELETE /api/events/64bfc80ab1f245321e889999
+
+Response:
+{
+  "message": "Registration cancelled"
+}
+
+### 4. Get Event Details
+
+Request: GET /api/events/64bfc80ab1f245321e889999
+
+Response
+
+{
+  "_id": "64bfc80ab1f245321e889999",
+  "title": "AI Conference 2025",
+  "dateTime": "2025-08-20T10:00:00.000Z",
+  "location": "Mumbai",
+  "capacity": 200,
+  "registrations": [
+    {
+      "_id": "64bfc012ab234a8e21973b01",
+      "username": "john",
+      "email": "john@example.com"
+    }
+  ]
+}
+
+### 5. List Upcoming Events
+
+Request: GET /api/events/upcoming
+
+Response:
+[
+  {
+    "_id": "64bfc80ab1f245321e889999",
+    "title": "AI Conference 2025",
+    "dateTime": "2025-08-20T10:00:00.000Z",
+    "location": "Mumbai",
+    "capacity": 200
+  },
+  {
+    "_id": "64bfc91ab2a123321e889888",
+    "title": "Tech Meetup",
+    "dateTime": "2025-09-10T14:00:00.000Z",
+    "location": "Bangalore",
+    "capacity": 150
+  }
+]
+
+### 6. Get Event Stats
+
+Request: GET /api/events/64bfc80ab1f245321e889999/stats
+
+Response:
+{
+  "totalRegistrations": 56,
+  "remainingCapacity": 144,
+  "percentageUsed": "28%"
+}
