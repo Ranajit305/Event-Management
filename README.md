@@ -70,8 +70,9 @@ Response:
 ```
 
 ### 2. Register for an Event:
-
+```bash
 Request: POST /api/events/64bfc80ab1f245321e889999
+```
 ```json
 Response:
 {
