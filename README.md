@@ -94,9 +94,9 @@ Response:
 }
 ```
 
-### 4. Get All Event Details
+### 4. Get Event Details
 ```bash
-Request: GET /api/event
+Request: GET /api/event/eventId/details
 ```
 ```json
 Response
@@ -143,11 +143,13 @@ Response:
 
 ### 6. Get Event Stats
 ```bash
-Request: GET /api/event/eventId
+Request: GET /api/event/eventId/stats
 ```
 ```json
 Response:
 {
+  "eventId": "eventId",
+  "title": "Tech Conference 2025",
   "totalRegistrations": 56,
   "remainingCapacity": 144,
   "percentageUsed": "28%"
