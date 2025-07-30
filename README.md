@@ -70,23 +70,27 @@ Response:
 ```
 
 ### 2. Register for an Event:
+```json
 Request: POST /api/events/64bfc80ab1f245321e889999
 
 Response:
 {
   "message": "Successfully registered for the event"
 }
+```
 
 ### 3. Cancel Registration:
+```json
 Request: DELETE /api/events/64bfc80ab1f245321e889999
 
 Response:
 {
   "message": "Registration cancelled"
 }
+```
 
 ### 4. Get Event Details
-
+```json
 Request: GET /api/events/64bfc80ab1f245321e889999
 
 Response
@@ -105,9 +109,10 @@ Response
     }
   ]
 }
+```
 
 ### 5. List Upcoming Events
-
+```json
 Request: GET /api/events/upcoming
 
 Response:
@@ -127,9 +132,10 @@ Response:
     "capacity": 150
   }
 ]
+```
 
 ### 6. Get Event Stats
-
+```json
 Request: GET /api/events/64bfc80ab1f245321e889999/stats
 
 Response:
@@ -138,3 +144,4 @@ Response:
   "remainingCapacity": 144,
   "percentageUsed": "28%"
 }
+```
