@@ -94,9 +94,9 @@ Response:
 }
 ```
 
-### 4. Get Event Details
+### 4. Get All Event Details
 ```bash
-Request: GET /api/event/eventId
+Request: GET /api/event
 ```
 ```json
 Response
