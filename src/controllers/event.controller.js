@@ -22,9 +22,10 @@ export const createEvent = async (req, res) => {
   }
 };
 
-export const getAllEvents = async (req, res) => {
+export const getEventDetails = async (req, res) => {
   try {
-    const event = await Event.find({}).populate('registrations', 'name email');
+    const { eventId } = req.params;
+    const event = await Event.findById(eventId).populate('registrations', 'name email');
 
     if (!event) {
       return res.status(404).json({ message: 'Event not found' });
