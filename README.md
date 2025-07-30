@@ -53,6 +53,7 @@ npm run dev
 ## Requests & Responses
 
 ### 1. Create an Event:
+```json
 Request:
 {
   "title": "AI Conference 2025",
@@ -66,6 +67,7 @@ Response:
   "message": "Event created and creator registered successfully",
   "eventId": "64bfc80ab1f245321e889999"
 }
+```
 
 ### 2. Register for an Event:
 Request: POST /api/events/64bfc80ab1f245321e889999
