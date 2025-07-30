@@ -68,13 +68,13 @@ Request Body:
 Response:
 {
   "message": "Event created and creator registered successfully",
-  "eventId": "64bfc80ab1f245321e889999"
+  "eventId": "eventId"
 }
 ```
 
 ### 2. Register for an Event:
 ```bash
-Request: POST /api/event/64bfc80ab1f245321e889999
+Request: POST /api/event/eventId
 ```
 ```json
 Response:
@@ -85,7 +85,7 @@ Response:
 
 ### 3. Cancel Registration:
 ```bash
-Request: DELETE /api/event/64bfc80ab1f245321e889999
+Request: DELETE /api/event/eventId
 ```
 ```json
 Response:
@@ -96,13 +96,13 @@ Response:
 
 ### 4. Get Event Details
 ```bash
-Request: GET /api/event/64bfc80ab1f245321e889999
+Request: GET /api/event/eventId
 ```
 ```json
 Response
 
 {
-  "_id": "64bfc80ab1f245321e889999",
+  "_id": "eventId",
   "title": "AI Conference 2025",
   "dateTime": "2025-08-20T10:00:00.000Z",
   "location": "Mumbai",
@@ -125,14 +125,14 @@ Request: GET /api/event/upcoming
 Response:
 [
   {
-    "_id": "64bfc80ab1f245321e889999",
+    "_id": "eventId",
     "title": "AI Conference 2025",
     "dateTime": "2025-08-20T10:00:00.000Z",
     "location": "Mumbai",
     "capacity": 200
   },
   {
-    "_id": "64bfc91ab2a123321e889888",
+    "_id": "eventId",
     "title": "Tech Meetup",
     "dateTime": "2025-09-10T14:00:00.000Z",
     "location": "Bangalore",
@@ -143,7 +143,7 @@ Response:
 
 ### 6. Get Event Stats
 ```bash
-Request: GET /api/event/64bfc80ab1f245321e889999
+Request: GET /api/event/eventId
 ```
 ```json
 Response:
