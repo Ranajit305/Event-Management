@@ -44,11 +44,11 @@ npm run dev
 | Method | Endpoint                   | Description                                |
 | ------ | -------------------------- | ------------------------------------------ |
 | POST   | `/` (protected)            | Create a new event (auto-register creator) |
-| GET    | `/`                        | Get all events with user list              |
+| GET    | `/eventId/details`         | Get event details with user list           |
 | POST   | `/:eventId` (protected)    | Register for an event                      |
 | DELETE | `/:eventId` (protected)    | Cancel event registration                  |
 | GET    | `/upcoming`                | List upcoming events                       |
-| GET    | `/:eventId`                | Get event stats                            |
+| GET    | `/:eventId/stats`          | Get event stats                            |
 
 ## Requests & Responses
 
