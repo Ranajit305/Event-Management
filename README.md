@@ -53,8 +53,11 @@ npm run dev
 ## Requests & Responses
 
 ### 1. Create an Event:
+```bash
+Request: POST /api/event
+```
 ```json
-Request:
+Request Body:
 {
   "title": "AI Conference 2025",
   "date": "2025-08-20T10:00:00.000Z",
@@ -71,7 +74,7 @@ Response:
 
 ### 2. Register for an Event:
 ```bash
-Request: POST /api/events/64bfc80ab1f245321e889999
+Request: POST /api/event/64bfc80ab1f245321e889999
 ```
 ```json
 Response:
@@ -82,7 +85,7 @@ Response:
 
 ### 3. Cancel Registration:
 ```bash
-Request: DELETE /api/events/64bfc80ab1f245321e889999
+Request: DELETE /api/event/64bfc80ab1f245321e889999
 ```
 ```json
 Response:
@@ -93,7 +96,7 @@ Response:
 
 ### 4. Get Event Details
 ```bash
-Request: GET /api/events/64bfc80ab1f245321e889999
+Request: GET /api/event/64bfc80ab1f245321e889999
 ```
 ```json
 Response
@@ -116,7 +119,7 @@ Response
 
 ### 5. List Upcoming Events
 ```bash
-Request: GET /api/events/upcoming
+Request: GET /api/event/upcoming
 ```
 ```json
 Response:
@@ -140,7 +143,7 @@ Response:
 
 ### 6. Get Event Stats
 ```bash
-Request: GET /api/events/64bfc80ab1f245321e889999/stats
+Request: GET /api/event/64bfc80ab1f245321e889999
 ```
 ```json
 Response:
