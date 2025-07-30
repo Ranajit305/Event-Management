@@ -81,8 +81,9 @@ Response:
 ```
 
 ### 3. Cancel Registration:
-
+```bash
 Request: DELETE /api/events/64bfc80ab1f245321e889999
+```
 ```json
 Response:
 {
@@ -91,8 +92,9 @@ Response:
 ```
 
 ### 4. Get Event Details
-
+```bash
 Request: GET /api/events/64bfc80ab1f245321e889999
+```
 ```json
 Response
 
@@ -113,8 +115,9 @@ Response
 ```
 
 ### 5. List Upcoming Events
-
+```bash
 Request: GET /api/events/upcoming
+```
 ```json
 Response:
 [
@@ -136,8 +139,9 @@ Response:
 ```
 
 ### 6. Get Event Stats
-
+```bash
 Request: GET /api/events/64bfc80ab1f245321e889999/stats
+```
 ```json
 Response:
 {
